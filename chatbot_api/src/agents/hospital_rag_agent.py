@@ -10,7 +10,7 @@ from langchain.agents import (
 from langchain import hub
 from chains.hospital_review_chain import reviews_vector_chain
 from chains.hospital_cypher_chain import hospital_cypher_chain
-from                              tools.wait_times import (
+from tools.wait_times import (
     get_current_wait_times,
     get_most_available_hospital
 )
@@ -77,7 +77,6 @@ hospital_agent_prompt = ChatPromptTemplate.from_messages([
 
 chat_model = ChatGoogleGenerativeAI(
     model=MODEL,
-    
     convert_systemtemperature=0,_message_to_human=True
 )
 
